@@ -20,7 +20,7 @@
 - number_of_emails_to_check==1  -  Number of emails to get from your mailbox
 - max_number_of_messages==5  -  Max number of messages sent to your phone (to prevent spam)
 - max_length_of_sms==32  -  Maximum length of SMS message
-- interval=30  -  Interval[s] between checking for new messages
+- interval==30  -  Interval[s] between checking for new messages
 - source_phone_number==+48987654321  -  Your twilio phone number
 - phone_number_destintion==+48123456789  -  Destination phone number
 - twillio_sid==some_id  -  Twilio sid
