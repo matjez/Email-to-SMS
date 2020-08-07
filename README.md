@@ -21,8 +21,8 @@
 - interval=30 - Interval[s] between checking for new messages
 - source_phone_number==+48987654321 - Your twilio phone number
 - phone_number_destintion==+48123456789 - Destination phone number
-- twillio_sid== - Twilio sid
-- twillio_auth_token== Twilio authorization token
+- twillio_sid==some_id - Twilio sid
+- twillio_auth_token==some_auth_token - Twilio authorization token
 
 If you want to use it on your private email I recommend you creating another account and redirect mails from one mailbox to another. If you use gmail account first you have to enable less secure apps. 
 
