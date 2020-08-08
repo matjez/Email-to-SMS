@@ -1,9 +1,11 @@
 email==example@test.com
 password==qwerty123
 followed_email==myemail@test.com
-phone_number_destintion==+48123456789
 number_of_emails_to_check==1
-SMS_header==+48987654321
 max_number_of_messages==5
+max_length_of_sms==32
+interval=30
+source_phone_number==+48987654321
+phone_number_destintion==+48123456789
 twillio_sid==
 twillio_auth_token==
