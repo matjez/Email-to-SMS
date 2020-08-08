@@ -25,7 +25,7 @@ max_number_of_messages = int(data["max_number_of_messages"])
 loops_without_sms = int(data["number_of_emails_to_check"])
 
 
-def send_SMS(number,from_who,message,msg_id):
+def send_SMS(from_who,message,msg_id):
     global max_number_of_messages, loops_without_sms 
 
     if data["followed_email"] in from_who:
@@ -70,7 +70,7 @@ def send_SMS(number,from_who,message,msg_id):
 
 def update_status():
 
-    imap = imaplib.IMAP4_SSL("imap.gmail.com")
+    imap = imaplib.IMAP4_SSL(data["imap_server"])
     imap.login(data["email"], data["password"])
 
     status, messages = imap.select("INBOX")
@@ -104,14 +104,14 @@ def update_status():
                             pass
                         
                         if content_type == "text/plain" and "attachment" not in content_disposition:
-                            send_SMS(783621421,from_,body,msg_id)
+                            send_SMS(from_,body,msg_id)
 
                 else:
                     content_type = msg.get_content_type()
                     body = msg.get_payload(decode=True).decode("latin2")
 
                     if content_type == "text/plain":
-                        send_SMS(783621421,str(from_),body,msg_id)
+                        send_SMS(str(from_),body,msg_id)
 
     imap.close()
     imap.logout()            
