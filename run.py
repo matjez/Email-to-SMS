@@ -4,7 +4,6 @@ import webbrowser
 import os
 import time
 
-from email.header import decode_header
 from twilio.rest import Client
 from tinydb import TinyDB, Query
 
@@ -84,7 +83,7 @@ def update_status():
             if isinstance(response, tuple):
                 
                 msg = email.message_from_bytes(response[1])
-                subject = decode_header(msg["Subject"])[0][0]
+                subject = email.header.decode_header(msg["Subject"])[0][0]
 
                 if isinstance(subject, bytes):
                     subject = subject.decode("latin2")
