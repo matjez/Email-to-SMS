@@ -4,7 +4,7 @@
  # Requirements
  - Python 3+
  - requirements.txt
- - twillio account
+ - Twilio account
  
 # Configuration
  
